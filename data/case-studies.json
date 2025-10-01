@@ -1,0 +1,68 @@
+[
+  {
+    "id": "1",
+    "title": "Fusion-acquisition majeure dans le secteur bancaire",
+    "category": "Droit des affaires",
+    "client": "Groupe bancaire régional",
+    "challenge": "Accompagnement juridique complet d'une opération de fusion-acquisition impliquant deux banques régionales pour un montant de 50 milliards FCFA.",
+    "solution": "Notre équipe a coordonné tous les aspects juridiques de l'opération : due diligence, négociation des accords, obtention des autorisations réglementaires, restructuration des entités et harmonisation des contrats.",
+    "result": "Finalisation réussie de l'opération en 8 mois, création d'un leader bancaire régional avec plus de 100 agences, et optimisation fiscale générant 2 milliards FCFA d'économies.",
+    "year": "2023",
+    "image": "/placeholder.svg?height=600&width=800"
+  },
+  {
+    "id": "2",
+    "title": "Contentieux familial complexe et succession internationale",
+    "category": "Droit civil",
+    "client": "Famille d'entrepreneur",
+    "challenge": "Règlement d'une succession internationale impliquant des biens au Cameroun, en France et en Suisse, avec des héritiers en conflit sur le partage d'un patrimoine de 15 milliards FCFA.",
+    "solution": "Médiation familiale, analyse des droits successoraux selon les trois juridictions, négociation d'un accord amiable et coordination avec des avocats internationaux pour l'exécution.",
+    "result": "Accord amiable signé évitant un procès de plusieurs années, partage équitable accepté par tous les héritiers, et préservation de l'harmonie familiale.",
+    "year": "2023",
+    "image": "/placeholder.svg?height=600&width=800"
+  },
+  {
+    "id": "3",
+    "title": "Défense pénale dans une affaire de fraude économique",
+    "category": "Droit pénal",
+    "client": "Dirigeant d'entreprise",
+    "challenge": "Défense d'un chef d'entreprise accusé de fraude fiscale et détournement de fonds pour un montant de 3 milliards FCFA, avec risque de peine de prison ferme.",
+    "solution": "Analyse approfondie du dossier révélant des irrégularités procédurales, démonstration de la bonne foi du client, négociation avec le parquet et plaidoirie convaincante devant le tribunal.",
+    "result": "Relaxe totale du client après 18 mois de procédure, reconnaissance de l'absence d'intention frauduleuse, et rétablissement de sa réputation professionnelle.",
+    "year": "2022",
+    "image": "/placeholder.svg?height=600&width=800"
+  },
+  {
+    "id": "4",
+    "title": "Restructuration sociale d'une multinationale",
+    "category": "Droit du travail",
+    "client": "Multinationale agroalimentaire",
+    "challenge": "Accompagnement d'un plan de restructuration impliquant 200 employés, avec nécessité de respecter le droit du travail camerounais et de maintenir le dialogue social.",
+    "solution": "Négociation avec les représentants du personnel, élaboration d'un plan social généreux, formation des managers, et suivi individuel de chaque dossier de licenciement ou reclassement.",
+    "result": "Restructuration menée sans conflit social, 80% des employés reclassés ou formés, indemnités supérieures aux minima légaux, et maintien de l'image de l'entreprise.",
+    "year": "2023",
+    "image": "/placeholder.svg?height=600&width=800"
+  },
+  {
+    "id": "5",
+    "title": "Contentieux fiscal et redressement",
+    "category": "Droit fiscal",
+    "client": "Groupe industriel",
+    "challenge": "Contestation d'un redressement fiscal de 8 milliards FCFA suite à un contrôle de l'administration fiscale portant sur 3 exercices comptables.",
+    "solution": "Analyse détaillée des chefs de redressement, identification d'erreurs de l'administration, négociation avec les services fiscaux et recours contentieux pour les points non négociables.",
+    "result": "Réduction du redressement à 2 milliards FCFA (75% d'économie), mise en place d'un échéancier de paiement favorable, et sécurisation des pratiques fiscales futures.",
+    "year": "2022",
+    "image": "/placeholder.svg?height=600&width=800"
+  },
+  {
+    "id": "6",
+    "title": "Arbitrage commercial international",
+    "category": "Arbitrage",
+    "client": "Entreprise de construction",
+    "challenge": "Litige contractuel avec un partenaire étranger portant sur un projet de construction de 20 milliards FCFA, avec clause d'arbitrage ICC.",
+    "solution": "Représentation du client devant le tribunal arbitral, constitution d'un dossier technique et juridique solide, audition de témoins experts, et plaidoirie finale convaincante.",
+    "result": "Sentence arbitrale favorable à notre client pour 12 milliards FCFA, exécution de la sentence dans 3 pays, et préservation de la relation commerciale.",
+    "year": "2023",
+    "image": "/placeholder.svg?height=600&width=800"
+  }
+]

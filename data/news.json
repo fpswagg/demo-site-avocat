@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "title": "Nouvelle réglementation OHADA sur les sociétés commerciales",
+    "category": "Droit des affaires",
+    "date": "2024-01-15",
+    "excerpt": "L'OHADA vient d'adopter de nouvelles dispositions concernant la gouvernance des sociétés commerciales. Découvrez les changements majeurs et leur impact sur votre entreprise.",
+    "content": "Le Conseil des Ministres de l'OHADA a adopté le 10 janvier 2024 une révision majeure de l'Acte uniforme relatif au droit des sociétés commerciales. Ces modifications visent à moderniser le cadre juridique des entreprises et à renforcer la protection des actionnaires minoritaires...",
+    "image": "/placeholder.svg?height=400&width=600",
+    "author": "Maître Jean-Paul Mbarga"
+  },
+  {
+    "id": "2",
+    "title": "Réforme du Code du travail camerounais : ce qui change en 2024",
+    "category": "Droit du travail",
+    "date": "2024-01-10",
+    "excerpt": "Le gouvernement camerounais a annoncé plusieurs amendements au Code du travail. Notre analyse détaillée des nouvelles dispositions pour les employeurs et salariés.",
+    "content": "Le Ministère du Travail a publié le décret n°2024-001 modifiant plusieurs articles du Code du travail. Les principales modifications concernent les contrats à durée déterminée, les procédures de licenciement et les congés parentaux...",
+    "image": "/placeholder.svg?height=400&width=600",
+    "author": "Maître Sophie Ekotto"
+  },
+  {
+    "id": "3",
+    "title": "Fiscalité 2024 : nouvelles mesures pour les entreprises",
+    "category": "Droit fiscal",
+    "date": "2024-01-05",
+    "excerpt": "La loi de finances 2024 introduit plusieurs mesures fiscales importantes. Analyse des opportunités d'optimisation et des nouvelles obligations déclaratives.",
+    "content": "La loi de finances pour l'exercice 2024 a été promulguée le 31 décembre 2023. Elle comporte des modifications significatives en matière d'impôt sur les sociétés, de TVA et de fiscalité locale. Les entreprises doivent adapter leurs pratiques...",
+    "image": "/placeholder.svg?height=400&width=600",
+    "author": "Maître David Tchoumba"
+  },
+  {
+    "id": "4",
+    "title": "Arbitrage CEMAC : nouvelles règles de procédure",
+    "category": "Arbitrage",
+    "date": "2023-12-20",
+    "excerpt": "La Cour Commune de Justice et d'Arbitrage de la CEMAC a adopté un nouveau règlement d'arbitrage. Les points clés à connaître pour vos litiges commerciaux.",
+    "content": "Le nouveau règlement d'arbitrage de la CCJA-CEMAC, entré en vigueur le 1er janvier 2024, modernise les procédures arbitrales dans la zone CEMAC. Il introduit notamment des délais plus courts et des dispositions sur l'arbitrage d'urgence...",
+    "image": "/placeholder.svg?height=400&width=600",
+    "author": "Maître Grace Njoya"
+  },
+  {
+    "id": "5",
+    "title": "Protection des données personnelles : guide pratique pour les entreprises",
+    "category": "Droit des affaires",
+    "date": "2023-12-15",
+    "excerpt": "Avec l'entrée en vigueur de la loi sur la protection des données personnelles, les entreprises doivent se mettre en conformité. Nos recommandations pratiques.",
+    "content": "La loi n°2023-015 relative à la protection des données à caractère personnel impose de nouvelles obligations aux entreprises camerounaises. Toute organisation traitant des données personnelles doit désormais respecter des principes stricts...",
+    "image": "/placeholder.svg?height=400&width=600",
+    "author": "Maître Jean-Paul Mbarga"
+  },
+  {
+    "id": "6",
+    "title": "Jurisprudence : revirement majeur en matière de responsabilité civile",
+    "category": "Droit civil",
+    "date": "2023-12-10",
+    "excerpt": "La Cour Suprême vient de rendre un arrêt important modifiant l'appréciation de la responsabilité civile en cas de dommage corporel. Analyse et implications.",
+    "content": "Dans son arrêt du 5 décembre 2023, la Cour Suprême du Cameroun a opéré un revirement de jurisprudence concernant l'évaluation du préjudice corporel. Cette décision aura des conséquences importantes pour toutes les affaires de responsabilité civile...",
+    "image": "/placeholder.svg?height=400&width=600",
+    "author": "Maître Aminata Ndiaye"
+  }
+]

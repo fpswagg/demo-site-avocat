@@ -1,0 +1,98 @@
+[
+  {
+    "id": "1",
+    "name": "Maître Jean-Paul Mbarga",
+    "role": "Associé fondateur",
+    "specialties": ["Droit des affaires", "Fusions-acquisitions", "Droit des sociétés"],
+    "bio": "Avec plus de 25 ans d'expérience, Maître Mbarga est reconnu comme l'un des meilleurs avocats d'affaires du Cameroun. Diplômé de l'Université de Yaoundé et de la Sorbonne, il a accompagné de nombreuses entreprises dans leur développement.",
+    "education": [
+      "Doctorat en Droit des affaires - Université Paris 1 Panthéon-Sorbonne",
+      "Master en Droit des affaires - Université de Yaoundé II",
+      "Certificat en Arbitrage International - ICC Paris"
+    ],
+    "languages": ["Français", "Anglais", "Allemand"],
+    "email": "jp.mbarga@cabinet-excellence.cm",
+    "phone": "+237 6 XX XX XX 01",
+    "image": "/placeholder.svg?height=600&width=600"
+  },
+  {
+    "id": "2",
+    "name": "Maître Aminata Ndiaye",
+    "role": "Associée",
+    "specialties": ["Droit civil", "Droit de la famille", "Droit immobilier"],
+    "bio": "Maître Ndiaye est spécialisée en droit civil et familial. Son approche empathique et sa rigueur juridique font d'elle une avocate très appréciée de ses clients. Elle a résolu plus de 300 affaires familiales complexes.",
+    "education": [
+      "Master 2 en Droit privé - Université de Yaoundé II",
+      "Diplôme d'Études Supérieures Spécialisées en Droit de la famille - Université de Dakar",
+      "Formation en médiation familiale - Institut de Médiation de Genève"
+    ],
+    "languages": ["Français", "Anglais", "Wolof"],
+    "email": "a.ndiaye@cabinet-excellence.cm",
+    "phone": "+237 6 XX XX XX 02",
+    "image": "/placeholder.svg?height=600&width=600"
+  },
+  {
+    "id": "3",
+    "name": "Maître François Kamga",
+    "role": "Associé",
+    "specialties": ["Droit pénal", "Droit pénal des affaires", "Contentieux"],
+    "bio": "Expert en droit pénal avec 18 ans d'expérience, Maître Kamga est réputé pour sa capacité à défendre les intérêts de ses clients dans les affaires les plus complexes. Il a obtenu de nombreux acquittements et relaxes.",
+    "education": [
+      "Master en Droit pénal et sciences criminelles - Université de Yaoundé II",
+      "Diplôme d'avocat - École du Barreau de Douala",
+      "Formation en droit pénal international - La Haye"
+    ],
+    "languages": ["Français", "Anglais"],
+    "email": "f.kamga@cabinet-excellence.cm",
+    "phone": "+237 6 XX XX XX 03",
+    "image": "/placeholder.svg?height=600&width=600"
+  },
+  {
+    "id": "4",
+    "name": "Maître Sophie Ekotto",
+    "role": "Avocate senior",
+    "specialties": ["Droit du travail", "Droit social", "Négociations collectives"],
+    "bio": "Maître Ekotto conseille entreprises et salariés en droit du travail. Sa connaissance approfondie du Code du travail camerounais et son expérience en négociation font d'elle une référence dans son domaine.",
+    "education": [
+      "Master 2 en Droit social - Université de Yaoundé II",
+      "Diplôme d'Études Approfondies en Droit du travail - Université de Douala",
+      "Certification en médiation sociale - OIT Genève"
+    ],
+    "languages": ["Français", "Anglais"],
+    "email": "s.ekotto@cabinet-excellence.cm",
+    "phone": "+237 6 XX XX XX 04",
+    "image": "/placeholder.svg?height=600&width=600"
+  },
+  {
+    "id": "5",
+    "name": "Maître David Tchoumba",
+    "role": "Avocat senior",
+    "specialties": ["Droit fiscal", "Fiscalité internationale", "Contentieux fiscal"],
+    "bio": "Spécialiste reconnu en droit fiscal, Maître Tchoumba accompagne les entreprises dans leur optimisation fiscale et les représente dans leurs contentieux avec l'administration fiscale.",
+    "education": [
+      "Master en Droit fiscal - Université de Yaoundé II",
+      "Diplôme d'Études Supérieures en Fiscalité internationale - HEC Paris",
+      "Expert-comptable diplômé - CEMAC"
+    ],
+    "languages": ["Français", "Anglais", "Espagnol"],
+    "email": "d.tchoumba@cabinet-excellence.cm",
+    "phone": "+237 6 XX XX XX 05",
+    "image": "/placeholder.svg?height=600&width=600"
+  },
+  {
+    "id": "6",
+    "name": "Maître Grace Njoya",
+    "role": "Avocate",
+    "specialties": ["Arbitrage", "Médiation", "Droit commercial"],
+    "bio": "Maître Njoya est spécialisée en modes alternatifs de résolution des conflits. Elle est arbitre accréditée auprès de plusieurs institutions d'arbitrage internationales.",
+    "education": [
+      "Master en Arbitrage international - Université Paris 2 Panthéon-Assas",
+      "LLM en Droit commercial international - Queen Mary University London",
+      "Certification d'arbitre - OHADA"
+    ],
+    "languages": ["Français", "Anglais"],
+    "email": "g.njoya@cabinet-excellence.cm",
+    "phone": "+237 6 XX XX XX 06",
+    "image": "/placeholder.svg?height=600&width=600"
+  }
+]
