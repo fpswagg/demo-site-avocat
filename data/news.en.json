@@ -1,0 +1,62 @@
+[
+    {
+        "id": "1",
+        "title": "New OHADA regulation on commercial companies",
+        "category": "Business law",
+        "date": "2024-01-15",
+        "excerpt": "OHADA has adopted new provisions regarding the governance of commercial companies. Discover the major changes and their impact on your business.",
+        "content": "The OHADA Council of Ministers adopted on January 10, 2024 a major revision of the Uniform Act relating to the law of commercial companies. These changes aim to modernize the legal framework for businesses and strengthen the protection of minority shareholders...",
+        "image": "/placeholder.svg?height=400&width=600",
+        "author": "Barrister Jean-Paul Mbarga"
+    },
+    {
+        "id": "2",
+        "title": "Reform of the Cameroonian Labor Code: what's changing in 2024",
+        "category": "Labor law",
+        "date": "2024-01-10",
+        "excerpt": "The Cameroonian government has announced several amendments to the Labor Code. Our detailed analysis of the new provisions for employers and employees.",
+        "content": "The Ministry of Labor published decree no. 2024-001 amending several articles of the Labor Code. The main changes concern fixed-term contracts, dismissal procedures and parental leave...",
+        "image": "/placeholder.svg?height=400&width=600",
+        "author": "Barrister Sophie Ekotto"
+    },
+    {
+        "id": "3",
+        "title": "Taxation 2024: new measures for companies",
+        "category": "Tax law",
+        "date": "2024-01-05",
+        "excerpt": "The 2024 finance law introduces several important tax measures. Analysis of optimization opportunities and new reporting obligations.",
+        "content": "The finance law for fiscal year 2024 was promulgated on December 31, 2023. It contains significant changes in corporate tax, VAT and local taxation. Companies must adapt their practices...",
+        "image": "/placeholder.svg?height=400&width=600",
+        "author": "Barrister David Tchoumba"
+    },
+    {
+        "id": "4",
+        "title": "CEMAC Arbitration: new procedural rules",
+        "category": "Arbitration",
+        "date": "2023-12-20",
+        "excerpt": "The CEMAC Common Court of Justice and Arbitration has adopted new arbitration rules. Key points to know for your commercial disputes.",
+        "content": "The new arbitration rules of the CCJA-CEMAC, effective January 1, 2024, modernize arbitration procedures in the CEMAC area. They notably introduce shorter deadlines and provisions on emergency arbitration...",
+        "image": "/placeholder.svg?height=400&width=600",
+        "author": "Barrister Grace Njoya"
+    },
+    {
+        "id": "5",
+        "title": "Personal data protection: practical guide for companies",
+        "category": "Business law",
+        "date": "2023-12-15",
+        "excerpt": "With the entry into force of the personal data protection law, companies must comply. Our practical recommendations.",
+        "content": "Law no. 2023-015 on the protection of personal data imposes new obligations on Cameroonian companies. Any organization processing personal data must now respect strict principles...",
+        "image": "/placeholder.svg?height=400&width=600",
+        "author": "Barrister Jean-Paul Mbarga"
+    },
+    {
+        "id": "6",
+        "title": "Case law: major shift in civil liability",
+        "category": "Civil law",
+        "date": "2023-12-10",
+        "excerpt": "The Supreme Court has just handed down an important decision modifying the assessment of civil liability in the event of bodily injury. Analysis and implications.",
+        "content": "In its judgment of December 5, 2023, the Supreme Court of Cameroon made a shift in case law concerning the assessment of bodily injury. This decision will have significant consequences for all civil liability cases...",
+        "image": "/placeholder.svg?height=400&width=600",
+        "author": "Barrister Aminata Ndiaye"
+    }
+]

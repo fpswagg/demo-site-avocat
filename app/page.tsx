@@ -1,9 +1,20 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Scale, Users, Award, TrendingUp, ArrowRight, CheckCircle } from "lucide-react"
+"use client";
+
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Scale,
+  Users,
+  Award,
+  TrendingUp,
+  ArrowRight,
+  CheckCircle,
+} from "lucide-react";
+import { useI18n } from "@/components/i18n-provider";
 
 export default function HomePage() {
+  const { t } = useI18n();
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -23,24 +34,27 @@ export default function HomePage() {
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 text-balance animate-fade-in-up">
-              Excellence juridique au service de vos ambitions
+              {t("home.heroTitle")}
             </h1>
             <p
               className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed max-w-2xl mx-auto animate-fade-in-up"
               style={{ animationDelay: "0.2s" }}
             >
-              Cabinet d'avocats de premier plan à Yaoundé, nous accompagnons entreprises et particuliers avec expertise
-              et dévouement depuis plus de 20 ans.
+              {t("home.heroSubtitle")}
             </p>
             <div
               className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up"
               style={{ animationDelay: "0.4s" }}
             >
-              <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                <Link href="/contact">Prendre rendez-vous</Link>
+              <Button
+                asChild
+                size="lg"
+                className="bg-accent text-accent-foreground hover:bg-accent/90"
+              >
+                <Link href="/contact">{t("common.bookAppointment")}</Link>
               </Button>
               <Button asChild size="lg" variant="outline">
-                <Link href="/services">Découvrir nos services</Link>
+                <Link href="/services">{t("home.ctaDiscoverServices")}</Link>
               </Button>
             </div>
           </div>
@@ -52,14 +66,18 @@ export default function HomePage() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { number: "20+", label: "Années d'expérience" },
-              { number: "500+", label: "Clients satisfaits" },
-              { number: "15", label: "Avocats experts" },
-              { number: "95%", label: "Taux de réussite" },
+              { number: "20+", label: t("home.statsYears") },
+              { number: "500+", label: t("home.statsClients") },
+              { number: "15", label: t("home.statsLawyers") },
+              { number: "95%", label: t("home.statsSuccessRate") },
             ].map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl font-serif font-bold text-accent mb-2">{stat.number}</div>
-                <div className="text-sm text-primary-foreground/80">{stat.label}</div>
+                <div className="text-4xl md:text-5xl font-serif font-bold text-accent mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-sm text-primary-foreground/80">
+                  {stat.label}
+                </div>
               </div>
             ))}
           </div>
@@ -71,10 +89,10 @@ export default function HomePage() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4 text-balance">
-              Nos domaines d'expertise
+              {t("home.expertiseTitle")}
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Une expertise complète pour répondre à tous vos besoins juridiques
+              {t("home.expertiseSubtitle")}
             </p>
           </div>
 
@@ -82,33 +100,33 @@ export default function HomePage() {
             {[
               {
                 icon: Scale,
-                title: "Droit des affaires",
-                description: "Conseil juridique, création de sociétés, contrats commerciaux et fusions-acquisitions.",
+                title: t("home.serviceBusiness"),
+                description: t("home.serviceBusinessDesc"),
               },
               {
                 icon: Users,
-                title: "Droit civil",
-                description: "Droit de la famille, successions, immobilier et litiges civils.",
+                title: t("home.serviceCivil"),
+                description: t("home.serviceCivilDesc"),
               },
               {
                 icon: Award,
-                title: "Droit du travail",
-                description: "Contrats de travail, licenciements, négociations collectives et contentieux prud'homaux.",
+                title: t("home.serviceLabor"),
+                description: t("home.serviceLaborDesc"),
               },
               {
                 icon: TrendingUp,
-                title: "Droit fiscal",
-                description: "Optimisation fiscale, contentieux fiscal et conseil en fiscalité d'entreprise.",
+                title: t("home.serviceTax"),
+                description: t("home.serviceTaxDesc"),
               },
               {
                 icon: CheckCircle,
-                title: "Droit pénal",
-                description: "Défense pénale, droit pénal des affaires et assistance aux victimes.",
+                title: t("home.serviceCriminal"),
+                description: t("home.serviceCriminalDesc"),
               },
               {
                 icon: Scale,
-                title: "Arbitrage & Médiation",
-                description: "Résolution alternative des conflits et représentation en arbitrage international.",
+                title: t("home.serviceArbitration"),
+                description: t("home.serviceArbitrationDesc"),
               },
             ].map((service, index) => (
               <Card
@@ -117,13 +135,17 @@ export default function HomePage() {
               >
                 <CardContent className="p-6">
                   <service.icon className="h-12 w-12 text-accent mb-4 group-hover:scale-110 transition-transform" />
-                  <h3 className="font-serif text-xl font-semibold mb-3 text-foreground">{service.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed mb-4">{service.description}</p>
+                  <h3 className="font-serif text-xl font-semibold mb-3 text-foreground">
+                    {service.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    {service.description}
+                  </p>
                   <Link
                     href="/services"
                     className="inline-flex items-center gap-2 text-accent hover:gap-3 transition-all text-sm font-medium"
                   >
-                    En savoir plus <ArrowRight className="h-4 w-4" />
+                    {t("common.readMore")} <ArrowRight className="h-4 w-4" />
                   </Link>
                 </CardContent>
               </Card>
@@ -138,20 +160,19 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
-                Pourquoi choisir Cabinet Excellence ?
+                {t("home.whyTitle")}
               </h2>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Notre engagement envers l'excellence et notre approche personnalisée font de nous le partenaire
-                juridique idéal pour vos projets.
+                {t("home.contactToday")}
               </p>
               <ul className="space-y-4">
                 {[
-                  "Équipe d'avocats hautement qualifiés et expérimentés",
-                  "Approche personnalisée adaptée à chaque client",
-                  "Disponibilité et réactivité exceptionnelles",
-                  "Expertise reconnue dans tous les domaines du droit",
-                  "Réseau international de partenaires juridiques",
-                  "Tarifs transparents et compétitifs",
+                  t("home.whyPoint1"),
+                  t("home.whyPoint2"),
+                  t("home.whyPoint3"),
+                  t("home.whyPoint4"),
+                  t("home.whyPoint5"),
+                  t("home.whyPoint6"),
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-0.5" />
@@ -161,7 +182,11 @@ export default function HomePage() {
               </ul>
             </div>
             <div className="relative h-[500px] rounded-lg overflow-hidden shadow-2xl">
-              <img src="/professional-african-lawyers-team.jpg" alt="Notre équipe" className="object-cover w-full h-full" />
+              <img
+                src="/professional-african-lawyers-team.jpg"
+                alt={t("home.ourTeamAlt")}
+                className="object-cover w-full h-full"
+              />
             </div>
           </div>
         </div>
@@ -173,19 +198,22 @@ export default function HomePage() {
           <Card className="bg-primary text-primary-foreground border-0">
             <CardContent className="p-12 lg:p-16 text-center">
               <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-balance">
-                Besoin d'un conseil juridique ?
+                {t("home.needAdvice")}
               </h2>
               <p className="text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-                Contactez-nous dès aujourd'hui pour une consultation personnalisée. Notre équipe est prête à vous
-                accompagner.
+                {t("home.contactToday")}
               </p>
-              <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                <Link href="/contact">Prendre rendez-vous maintenant</Link>
+              <Button
+                asChild
+                size="lg"
+                className="bg-accent text-accent-foreground hover:bg-accent/90"
+              >
+                <Link href="/contact">{t("home.bookNow")}</Link>
               </Button>
             </CardContent>
           </Card>
         </div>
       </section>
     </div>
-  )
+  );
 }

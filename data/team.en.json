@@ -1,0 +1,143 @@
+[
+    {
+        "id": "1",
+        "name": "Barrister Jean-Paul Mbarga",
+        "role": "Founding Partner",
+        "specialties": [
+            "Business law",
+            "Mergers & acquisitions",
+            "Corporate law"
+        ],
+        "bio": "With over 25 years of experience, Barrister Mbarga is recognized as one of Cameroon's leading business lawyers. A graduate of the University of Yaoundé and the Sorbonne, he has supported many companies in their growth.",
+        "education": [
+            "PhD in Business Law - Université Paris 1 Panthéon-Sorbonne",
+            "Master in Business Law - Université de Yaoundé II",
+            "Certificate in International Arbitration - ICC Paris"
+        ],
+        "languages": [
+            "French",
+            "English",
+            "German"
+        ],
+        "email": "jp.mbarga@cabinet-excellence.cm",
+        "phone": "+237 6 XX XX XX 01",
+        "image": "/placeholder.svg?height=600&width=600"
+    },
+    {
+        "id": "2",
+        "name": "Barrister Aminata Ndiaye",
+        "role": "Partner",
+        "specialties": [
+            "Civil law",
+            "Family law",
+            "Real estate law"
+        ],
+        "bio": "Barrister Ndiaye specializes in civil and family law. Her empathetic approach and legal rigor make her a highly appreciated lawyer by her clients. She has resolved more than 300 complex family cases.",
+        "education": [
+            "Master 2 in Private Law - Université de Yaoundé II",
+            "Specialized Higher Studies Diploma in Family Law - Université de Dakar",
+            "Training in family mediation - Geneva Mediation Institute"
+        ],
+        "languages": [
+            "French",
+            "English",
+            "Wolof"
+        ],
+        "email": "a.ndiaye@cabinet-excellence.cm",
+        "phone": "+237 6 XX XX XX 02",
+        "image": "/placeholder.svg?height=600&width=600"
+    },
+    {
+        "id": "3",
+        "name": "Barrister François Kamga",
+        "role": "Partner",
+        "specialties": [
+            "Criminal law",
+            "Corporate criminal law",
+            "Litigation"
+        ],
+        "bio": "An expert in criminal law with 18 years of experience, Barrister Kamga is renowned for defending clients' interests in the most complex cases. He has obtained numerous acquittals and dismissals.",
+        "education": [
+            "Master in Criminal Law and Criminology - Université de Yaoundé II",
+            "Lawyer's diploma - Douala Bar School",
+            "Training in international criminal law - The Hague"
+        ],
+        "languages": [
+            "French",
+            "English"
+        ],
+        "email": "f.kamga@cabinet-excellence.cm",
+        "phone": "+237 6 XX XX XX 03",
+        "image": "/placeholder.svg?height=600&width=600"
+    },
+    {
+        "id": "4",
+        "name": "Barrister Sophie Ekotto",
+        "role": "Senior Lawyer",
+        "specialties": [
+            "Labor law",
+            "Social law",
+            "Collective bargaining"
+        ],
+        "bio": "Barrister Ekotto advises companies and employees in labor law. Her in-depth knowledge of the Cameroonian Labor Code and her experience in negotiation make her a reference in her field.",
+        "education": [
+            "Master 2 in Social Law - Université de Yaoundé II",
+            "Advanced Studies Diploma in Labor Law - Université de Douala",
+            "Certification in social mediation - ILO Geneva"
+        ],
+        "languages": [
+            "French",
+            "English"
+        ],
+        "email": "s.ekotto@cabinet-excellence.cm",
+        "phone": "+237 6 XX XX XX 04",
+        "image": "/placeholder.svg?height=600&width=600"
+    },
+    {
+        "id": "5",
+        "name": "Barrister David Tchoumba",
+        "role": "Senior Lawyer",
+        "specialties": [
+            "Tax law",
+            "International taxation",
+            "Tax litigation"
+        ],
+        "bio": "A recognized specialist in tax law, Barrister Tchoumba assists companies with tax optimization and represents them in disputes with the tax authorities.",
+        "education": [
+            "Master in Tax Law - Université de Yaoundé II",
+            "Higher Studies Diploma in International Taxation - HEC Paris",
+            "Certified public accountant - CEMAC"
+        ],
+        "languages": [
+            "French",
+            "English",
+            "Spanish"
+        ],
+        "email": "d.tchoumba@cabinet-excellence.cm",
+        "phone": "+237 6 XX XX XX 05",
+        "image": "/placeholder.svg?height=600&width=600"
+    },
+    {
+        "id": "6",
+        "name": "Barrister Grace Njoya",
+        "role": "Lawyer",
+        "specialties": [
+            "Arbitration",
+            "Mediation",
+            "Commercial law"
+        ],
+        "bio": "Barrister Njoya specializes in alternative dispute resolution. She is an accredited arbitrator with several international arbitration institutions.",
+        "education": [
+            "Master in International Arbitration - Université Paris 2 Panthéon-Assas",
+            "LLM in International Commercial Law - Queen Mary University London",
+            "Arbitrator certification - OHADA"
+        ],
+        "languages": [
+            "French",
+            "English"
+        ],
+        "email": "g.njoya@cabinet-excellence.cm",
+        "phone": "+237 6 XX XX XX 06",
+        "image": "/placeholder.svg?height=600&width=600"
+    }
+]

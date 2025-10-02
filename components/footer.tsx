@@ -1,8 +1,20 @@
-import Link from "next/link"
-import { Scale, Phone, Mail, MapPin, Facebook, Linkedin, Twitter } from "lucide-react"
-import { siteConfig } from "@/lib/config"
+"use client";
+
+import Link from "next/link";
+import {
+  Scale,
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Linkedin,
+  Twitter,
+} from "lucide-react";
+import { siteConfig } from "@/lib/config";
+import { useI18n } from "@/components/i18n-provider";
 
 export function Footer() {
+  const { t } = useI18n();
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 lg:px-8 py-12 lg:py-16">
@@ -11,29 +23,35 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <Scale className="h-8 w-8 text-accent" />
-              <span className="font-serif text-xl font-semibold">{siteConfig.name}</span>
+              <span className="font-serif text-xl font-semibold">
+                {siteConfig.name}
+              </span>
             </div>
             <p className="text-sm text-primary-foreground/80 leading-relaxed">
-              Votre partenaire juridique de confiance à Yaoundé, offrant des services juridiques d'excellence depuis
-              plus de 20 ans.
+              {t("footer.brandDescription")}
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-serif text-lg font-semibold mb-4">Liens rapides</h3>
+            <h3 className="font-serif text-lg font-semibold mb-4">
+              {t("footer.quickLinks")}
+            </h3>
             <ul className="space-y-2">
               <li>
                 <Link
                   href="/services"
                   className="text-sm text-primary-foreground/80 hover:text-accent transition-colors"
                 >
-                  Nos services
+                  {t("footer.ourServices")}
                 </Link>
               </li>
               <li>
-                <Link href="/equipe" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
-                  Notre équipe
+                <Link
+                  href="/equipe"
+                  className="text-sm text-primary-foreground/80 hover:text-accent transition-colors"
+                >
+                  {t("footer.ourTeam")}
                 </Link>
               </li>
               <li>
@@ -41,7 +59,7 @@ export function Footer() {
                   href="/reussites"
                   className="text-sm text-primary-foreground/80 hover:text-accent transition-colors"
                 >
-                  Nos réussites
+                  {t("footer.ourCaseStudies")}
                 </Link>
               </li>
               <li>
@@ -49,7 +67,7 @@ export function Footer() {
                   href="/actualites"
                   className="text-sm text-primary-foreground/80 hover:text-accent transition-colors"
                 >
-                  Actualités
+                  {t("footer.news")}
                 </Link>
               </li>
             </ul>
@@ -57,7 +75,9 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="font-serif text-lg font-semibold mb-4">Contact</h3>
+            <h3 className="font-serif text-lg font-semibold mb-4">
+              {t("footer.contact")}
+            </h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-2">
                 <MapPin className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
@@ -71,18 +91,24 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-5 w-5 text-accent flex-shrink-0" />
-                <span className="text-sm text-primary-foreground/80">{siteConfig.contact.phone}</span>
+                <span className="text-sm text-primary-foreground/80">
+                  {siteConfig.contact.phone}
+                </span>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-5 w-5 text-accent flex-shrink-0" />
-                <span className="text-sm text-primary-foreground/80">{siteConfig.contact.email}</span>
+                <span className="text-sm text-primary-foreground/80">
+                  {siteConfig.contact.email}
+                </span>
               </li>
             </ul>
           </div>
 
           {/* Hours */}
           <div>
-            <h3 className="font-serif text-lg font-semibold mb-4">Horaires</h3>
+            <h3 className="font-serif text-lg font-semibold mb-4">
+              {t("footer.hours")}
+            </h3>
             <ul className="space-y-2 text-sm text-primary-foreground/80">
               <li>{siteConfig.hours.weekdays}</li>
               <li>{siteConfig.hours.saturday}</li>
@@ -113,10 +139,11 @@ export function Footer() {
 
         <div className="border-t border-primary-foreground/20 mt-12 pt-8 text-center text-sm text-primary-foreground/60">
           <p>
-            &copy; {new Date().getFullYear()} {siteConfig.name}. Tous droits réservés.
+            &copy; {new Date().getFullYear()} {siteConfig.name}.{" "}
+            {t("common.allRightsReserved")}
           </p>
         </div>
       </div>
     </footer>
-  )
+  );
 }

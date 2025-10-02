@@ -1,0 +1,68 @@
+[
+    {
+        "id": "1",
+        "title": "Major merger and acquisition in the banking sector",
+        "category": "Business law",
+        "client": "Regional banking group",
+        "challenge": "Comprehensive legal support for a merger and acquisition involving two regional banks for an amount of 50 billion FCFA.",
+        "solution": "Our team coordinated all legal aspects of the transaction: due diligence, negotiation of agreements, obtaining regulatory authorizations, restructuring entities and harmonizing contracts.",
+        "result": "Successful completion of the transaction in 8 months, creation of a regional banking leader with over 100 branches, and tax optimization generating 2 billion FCFA in savings.",
+        "year": "2023",
+        "image": "/placeholder.svg?height=600&width=800"
+    },
+    {
+        "id": "2",
+        "title": "Complex family litigation and international succession",
+        "category": "Civil law",
+        "client": "Entrepreneur's family",
+        "challenge": "Settlement of an international succession involving assets in Cameroon, France and Switzerland, with heirs in conflict over the division of a 15 billion FCFA estate.",
+        "solution": "Family mediation, analysis of inheritance rights under the three jurisdictions, negotiation of an amicable agreement and coordination with international lawyers for execution.",
+        "result": "Amicable agreement signed avoiding years-long litigation, fair division accepted by all heirs, and preservation of family harmony.",
+        "year": "2023",
+        "image": "/placeholder.svg?height=600&width=800"
+    },
+    {
+        "id": "3",
+        "title": "Criminal defense in an economic fraud case",
+        "category": "Criminal law",
+        "client": "Company executive",
+        "challenge": "Defense of a business leader accused of tax fraud and embezzlement in the amount of 3 billion FCFA, with risk of imprisonment.",
+        "solution": "Thorough analysis of the case revealing procedural irregularities, demonstration of the client's good faith, negotiation with the prosecutor and convincing pleadings before the court.",
+        "result": "Total acquittal after 18 months of proceedings, recognition of the absence of fraudulent intent, and restoration of his professional reputation.",
+        "year": "2022",
+        "image": "/placeholder.svg?height=600&width=800"
+    },
+    {
+        "id": "4",
+        "title": "Social restructuring of a multinational",
+        "category": "Labor law",
+        "client": "Agri-food multinational",
+        "challenge": "Support for a restructuring plan involving 200 employees, with the need to comply with Cameroonian labor law and maintain social dialogue.",
+        "solution": "Negotiation with employee representatives, development of a generous social plan, training of managers, and individual follow-up of each layoff or redeployment case.",
+        "result": "Restructuring carried out without social conflict, 80% of employees redeployed or trained, severance pay above legal minimums, and preservation of the company's image.",
+        "year": "2023",
+        "image": "/placeholder.svg?height=600&width=800"
+    },
+    {
+        "id": "5",
+        "title": "Tax litigation and reassessment",
+        "category": "Tax law",
+        "client": "Industrial group",
+        "challenge": "Challenge of a tax reassessment of 8 billion FCFA following a tax audit covering 3 fiscal years.",
+        "solution": "Detailed analysis of the reassessment grounds, identification of administration errors, negotiation with tax authorities and litigation for non-negotiable points.",
+        "result": "Reduction of the reassessment to 2 billion FCFA (75% savings), implementation of a favorable payment schedule, and securing of future tax practices.",
+        "year": "2022",
+        "image": "/placeholder.svg?height=600&width=800"
+    },
+    {
+        "id": "6",
+        "title": "International commercial arbitration",
+        "category": "Arbitration",
+        "client": "Construction company",
+        "challenge": "Contractual dispute with a foreign partner concerning a 20 billion FCFA construction project, with ICC arbitration clause.",
+        "solution": "Representation of the client before the arbitral tribunal, preparation of a strong technical and legal case, examination of expert witnesses, and convincing final pleadings.",
+        "result": "Arbitral award favorable to our client for 12 billion FCFA, enforcement of the award in 3 countries, and preservation of the commercial relationship.",
+        "year": "2023",
+        "image": "/placeholder.svg?height=600&width=800"
+    }
+]
