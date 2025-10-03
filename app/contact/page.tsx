@@ -13,7 +13,7 @@ import { siteConfig } from "@/lib/config";
 import { useI18n } from "@/components/i18n-provider";
 
 export default function ContactPage() {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -77,11 +77,12 @@ export default function ContactPage() {
                         {t("contact.address")}
                       </h3>
                       <p className="text-sm text-muted-foreground">
-                        {siteConfig.address.street}
+                        {siteConfig.address.street[locale]}
                         <br />
-                        {siteConfig.address.district}
+                        {siteConfig.address.district[locale]}
                         <br />
-                        {siteConfig.address.city}, {siteConfig.address.country}
+                        {siteConfig.address.city[locale]},{" "}
+                        {siteConfig.address.country[locale]}
                       </p>
                     </div>
                   </div>
@@ -127,11 +128,11 @@ export default function ContactPage() {
                         {t("contact.hours")}
                       </h3>
                       <p className="text-sm text-muted-foreground">
-                        {siteConfig.hours.weekdays}
+                        {siteConfig.hours.weekdays[locale]}
                         <br />
-                        {siteConfig.hours.saturday}
+                        {siteConfig.hours.saturday[locale]}
                         <br />
-                        {siteConfig.hours.sunday}
+                        {siteConfig.hours.sunday[locale]}
                       </p>
                     </div>
                   </div>
@@ -279,7 +280,7 @@ export default function ContactPage() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title={`Localisation ${siteConfig.name}`}
+                title={`Localisation ${siteConfig.name[locale]}`}
               />
             </div>
           </Card>

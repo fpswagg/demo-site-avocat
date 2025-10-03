@@ -45,7 +45,7 @@ export function Navigation() {
           <Link href="/" className="flex items-center gap-2 group">
             <Scale className="h-8 w-8 text-accent transition-transform group-hover:scale-110" />
             <span className="font-serif text-xl font-semibold text-foreground">
-              {siteConfig.name}
+              {siteConfig.name[locale]}
             </span>
           </Link>
 

@@ -118,6 +118,33 @@ const messages: NamespacedMessages = {
       emailPlaceholder: "Votre adresse email",
       subscribe: "S'inscrire",
     },
+    article: {
+      notFound: "Article non trouvé",
+      notFoundDesc:
+        "L'article que vous recherchez n'existe pas ou a été supprimé.",
+      backToNews: "Retour aux actualités",
+      share: "Partager",
+      writtenBy: "Rédigé par",
+      relatedArticles: "Articles similaires",
+      needHelp: "Besoin d'un conseil juridique ?",
+      needHelpDesc:
+        "Notre équipe d'experts est à votre disposition pour vous accompagner dans vos démarches juridiques.",
+    },
+    caseStudy: {
+      notFound: "Réussite non trouvée",
+      notFoundDesc:
+        "La réussite que vous recherchez n'existe pas ou a été supprimée.",
+      backToCaseStudies: "Retour aux réussites",
+      share: "Partager",
+      overview: "Vue d'ensemble",
+      theChallenge: "Le défi",
+      ourSolution: "Notre solution",
+      theResult: "Le résultat",
+      moreSuccess: "Plus de réussites",
+      needHelp: "Besoin d'accompagnement juridique ?",
+      needHelpDesc:
+        "Confiez-nous votre dossier et bénéficiez de notre expertise reconnue.",
+    },
     caseStudies: {
       heroTitle: "Nos réussites",
       heroSubtitle:
@@ -267,6 +294,33 @@ const messages: NamespacedMessages = {
       emailPlaceholder: "Your email address",
       subscribe: "Subscribe",
     },
+    article: {
+      notFound: "Article not found",
+      notFoundDesc:
+        "The article you are looking for does not exist or has been deleted.",
+      backToNews: "Back to news",
+      share: "Share",
+      writtenBy: "Written by",
+      relatedArticles: "Related articles",
+      needHelp: "Need legal advice?",
+      needHelpDesc:
+        "Our team of experts is available to assist you with your legal matters.",
+    },
+    caseStudy: {
+      notFound: "Success story not found",
+      notFoundDesc:
+        "The success story you are looking for does not exist or has been deleted.",
+      backToCaseStudies: "Back to success stories",
+      share: "Share",
+      overview: "Overview",
+      theChallenge: "The challenge",
+      ourSolution: "Our solution",
+      theResult: "The result",
+      moreSuccess: "More success stories",
+      needHelp: "Need legal assistance?",
+      needHelpDesc:
+        "Entrust us with your case and benefit from our recognized expertise.",
+    },
     caseStudies: {
       heroTitle: "Our successes",
       heroSubtitle:
@@ -378,4 +432,3 @@ export function useI18n() {
 export function getDateLocaleTag(locale: Locale): string {
   return locale === "en" ? "en-US" : "fr-FR";
 }
-

@@ -14,7 +14,7 @@ import { siteConfig } from "@/lib/config";
 import { useI18n } from "@/components/i18n-provider";
 
 export function Footer() {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 lg:px-8 py-12 lg:py-16">
@@ -24,7 +24,7 @@ export function Footer() {
             <div className="flex items-center gap-2 mb-4">
               <Scale className="h-8 w-8 text-accent" />
               <span className="font-serif text-xl font-semibold">
-                {siteConfig.name}
+                {siteConfig.name[locale]}
               </span>
             </div>
             <p className="text-sm text-primary-foreground/80 leading-relaxed">
@@ -82,11 +82,12 @@ export function Footer() {
               <li className="flex items-start gap-2">
                 <MapPin className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                 <span className="text-sm text-primary-foreground/80">
-                  {siteConfig.address.street}
+                  {siteConfig.address.street[locale]}
                   <br />
-                  {siteConfig.address.district}
+                  {siteConfig.address.district[locale]}
                   <br />
-                  {siteConfig.address.city}, {siteConfig.address.country}
+                  {siteConfig.address.city[locale]},{" "}
+                  {siteConfig.address.country[locale]}
                 </span>
               </li>
               <li className="flex items-center gap-2">
@@ -110,9 +111,9 @@ export function Footer() {
               {t("footer.hours")}
             </h3>
             <ul className="space-y-2 text-sm text-primary-foreground/80">
-              <li>{siteConfig.hours.weekdays}</li>
-              <li>{siteConfig.hours.saturday}</li>
-              <li>{siteConfig.hours.sunday}</li>
+              <li>{siteConfig.hours.weekdays[locale]}</li>
+              <li>{siteConfig.hours.saturday[locale]}</li>
+              <li>{siteConfig.hours.sunday[locale]}</li>
             </ul>
             <div className="flex gap-4 mt-6">
               <a
@@ -139,7 +140,7 @@ export function Footer() {
 
         <div className="border-t border-primary-foreground/20 mt-12 pt-8 text-center text-sm text-primary-foreground/60">
           <p>
-            &copy; {new Date().getFullYear()} {siteConfig.name}.{" "}
+            &copy; 2025 {siteConfig.name[locale]}.{" "}
             {t("common.allRightsReserved")}
           </p>
         </div>
