@@ -12,23 +12,61 @@ import {
   CheckCircle,
 } from "lucide-react";
 import { useI18n } from "@/components/i18n-provider";
+import { useState, useEffect } from "react";
+import teamDataFr from "@/data/team.json";
+import teamDataEn from "@/data/team.en.json";
 
 export default function HomePage() {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
+  const teamData = locale === "en" ? teamDataEn : teamDataFr;
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Auto-rotate images every 4 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % teamData.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [teamData.length]);
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center pt-20">
-        <div
-          className="absolute inset-0 z-0"
-          style={{
-            backgroundImage:
-              "url(/placeholder.svg?height=1080&width=1920&query=elegant+law+office+interior+with+books)",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/90 to-background" />
+      <section className="relative min-h-[90vh] flex items-center justify-center pt-20 overflow-hidden">
+        {/* Carousel Background */}
+        <div className="absolute inset-0 z-0">
+          {teamData.map((member: any, index: number) => (
+            <div
+              key={member.id}
+              className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
+              style={{
+                opacity: currentImageIndex === index ? 1 : 0,
+              }}
+            >
+              <img
+                src={member.image || "/placeholder.svg"}
+                alt={member.name}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/90 to-background" />
+            </div>
+          ))}
+        </div>
+
+        {/* Carousel Indicators */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex gap-2">
+          {teamData.map((_: any, index: number) => (
+            <button
+              key={index}
+              onClick={() => setCurrentImageIndex(index)}
+              className={`h-2 rounded-full transition-all duration-300 ${
+                currentImageIndex === index
+                  ? "w-8 bg-accent"
+                  : "w-2 bg-muted-foreground/40 hover:bg-muted-foreground/60"
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
         </div>
 
         <div className="container mx-auto px-4 lg:px-8 relative z-10">

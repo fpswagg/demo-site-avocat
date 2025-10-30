@@ -129,6 +129,8 @@ const messages: NamespacedMessages = {
       needHelp: "Besoin d'un conseil juridique ?",
       needHelpDesc:
         "Notre équipe d'experts est à votre disposition pour vous accompagner dans vos démarches juridiques.",
+      linkCopied: "Lien copié dans le presse-papiers",
+      shareError: "Impossible de partager le lien",
     },
     caseStudy: {
       notFound: "Réussite non trouvée",
@@ -305,6 +307,8 @@ const messages: NamespacedMessages = {
       needHelp: "Need legal advice?",
       needHelpDesc:
         "Our team of experts is available to assist you with your legal matters.",
+      linkCopied: "Link copied to clipboard",
+      shareError: "Unable to share the link",
     },
     caseStudy: {
       notFound: "Success story not found",

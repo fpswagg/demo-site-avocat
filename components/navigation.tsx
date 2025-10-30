@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Scale } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/lib/config";
 import { useI18n } from "@/components/i18n-provider";
@@ -18,32 +18,24 @@ const navItemsStatic = [
 ];
 
 export function Navigation() {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { t, locale, setLocale } = useI18n();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <nav
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled
-          ? "bg-background/95 backdrop-blur-sm shadow-sm"
-          : "bg-transparent"
-      )}
-    >
+    <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background/95 backdrop-blur-sm shadow-sm">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <Scale className="h-8 w-8 text-accent transition-transform group-hover:scale-110" />
+          <Link href="/" className="flex items-center gap-3 group">
+            {/* Logo image with graceful fallback */}
+            <img
+              src="/logo.png"
+              alt={siteConfig.name[locale]}
+              className="h-8 w-8 rounded-sm object-contain transition-transform group-hover:scale-110"
+              onError={(e) => {
+                (e.currentTarget as HTMLImageElement).src = "/placeholder-logo.png";
+              }}
+            />
             <span className="font-serif text-xl font-semibold text-foreground">
               {siteConfig.name[locale]}
             </span>

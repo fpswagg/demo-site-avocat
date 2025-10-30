@@ -1,6 +1,6 @@
 "use client";
 
-import { useParams } from "next/navigation";
+import { useParams, usePathname } from "next/navigation";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -9,10 +9,13 @@ import { Calendar, User, ArrowLeft, Share2 } from "lucide-react";
 import newsDataFr from "@/data/news.json";
 import newsDataEn from "@/data/news.en.json";
 import { useI18n, getDateLocaleTag } from "@/components/i18n-provider";
+import { useToast } from "@/hooks/use-toast";
 
 export default function ArticlePage() {
   const params = useParams();
   const { t, locale } = useI18n();
+  const pathname = usePathname();
+  const { toast } = useToast();
   const newsData = locale === "en" ? newsDataEn : newsDataFr;
   const articleId = params.id as string;
 
@@ -55,6 +58,31 @@ export default function ArticlePage() {
     )
     .slice(0, 3);
 
+  const handleShare = async () => {
+    try {
+      const url = typeof window !== "undefined" ? `${window.location.origin}${pathname}` : "";
+      const shareData: ShareData = {
+        title: article.title,
+        text: article.excerpt || article.title,
+        url,
+      };
+      if (navigator.share) {
+        await navigator.share(shareData);
+      } else {
+        await navigator.clipboard.writeText(url);
+        toast({ description: t("article.linkCopied") });
+      }
+    } catch (err) {
+      const url = typeof window !== "undefined" ? `${window.location.origin}${pathname}` : "";
+      try {
+        await navigator.clipboard.writeText(url);
+        toast({ description: t("article.linkCopied") });
+      } catch {
+        toast({ description: t("article.shareError") });
+      }
+    }
+  };
+
   return (
     <div className="min-h-screen pt-20">
       {/* Breadcrumb */}
@@ -88,9 +116,11 @@ export default function ArticlePage() {
               </Button>
             </Link>
 
+            <div>
             <Badge variant="outline" className="mb-4">
               {article.category}
             </Badge>
+            </div>
 
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance">
               {article.title}
@@ -108,7 +138,7 @@ export default function ArticlePage() {
             </div>
 
             <div className="flex items-center gap-3 mb-8">
-              <Button variant="outline" size="sm">
+              <Button variant="outline" size="sm" onClick={handleShare}>
                 <Share2 className="mr-2 h-4 w-4" />
                 {t("article.share")}
               </Button>
@@ -159,7 +189,7 @@ export default function ArticlePage() {
                     {article.author}
                   </p>
                 </div>
-                <Button variant="outline">
+                <Button variant="outline" onClick={handleShare}>
                   <Share2 className="mr-2 h-4 w-4" />
                   {t("article.share")}
                 </Button>

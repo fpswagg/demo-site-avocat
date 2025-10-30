@@ -5,12 +5,15 @@ import { Badge } from "@/components/ui/badge";
 import { CheckCircle, TrendingUp, Users, Award } from "lucide-react";
 import caseStudiesDataFr from "@/data/case-studies.json";
 import caseStudiesDataEn from "@/data/case-studies.en.json";
+import testimonialsFr from "@/data/testimonials.json";
+import testimonialsEn from "@/data/testimonials.en.json";
 import { useI18n } from "@/components/i18n-provider";
 
 export default function CaseStudiesPage() {
   const { t, locale } = useI18n();
   const caseStudiesData =
     locale === "en" ? caseStudiesDataEn : caseStudiesDataFr;
+  const testimonials = locale === "en" ? testimonialsEn : testimonialsFr;
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
@@ -169,23 +172,7 @@ export default function CaseStudiesPage() {
             {t("caseStudies.testimonials")}
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                quote:
-                  "Cabinet Excellence a géré notre fusion avec un professionnalisme exceptionnel. Leur expertise nous a fait économiser des millions.",
-                author: "Directeur Général, Groupe Bancaire",
-              },
-              {
-                quote:
-                  "Grâce à Maître Ndiaye, j'ai pu résoudre un conflit familial qui durait depuis des années. Son empathie et sa compétence sont remarquables.",
-                author: "Client particulier",
-              },
-              {
-                quote:
-                  "L'équipe fiscale du cabinet nous a sauvés d'un redressement catastrophique. Leur connaissance du droit fiscal est impressionnante.",
-                author: "PDG, Groupe Industriel",
-              },
-            ].map((testimonial, index) => (
+            {testimonials.map((testimonial: any, index: number) => (
               <Card key={index}>
                 <CardContent className="p-6">
                   <p className="text-muted-foreground italic mb-4 leading-relaxed">

@@ -15,116 +15,23 @@ import {
   Shield,
 } from "lucide-react";
 import { useI18n } from "@/components/i18n-provider";
+import servicesFr from "@/data/services.json";
+import servicesEn from "@/data/services.en.json";
 
-const services = [
-  {
-    icon: Briefcase,
-    title: "Droit des affaires",
-    description: "Accompagnement juridique complet pour les entreprises",
-    details: [
-      "Création et structuration de sociétés",
-      "Rédaction et négociation de contrats commerciaux",
-      "Fusions, acquisitions et restructurations",
-      "Droit des sociétés et gouvernance d'entreprise",
-      "Propriété intellectuelle et protection des marques",
-      "Contentieux commercial",
-    ],
-  },
-  {
-    icon: Users,
-    title: "Droit civil",
-    description: "Protection de vos intérêts personnels et familiaux",
-    details: [
-      "Droit de la famille (divorce, garde d'enfants)",
-      "Successions et donations",
-      "Droit immobilier (vente, location, copropriété)",
-      "Responsabilité civile",
-      "Contrats entre particuliers",
-      "Litiges civils et médiation",
-    ],
-  },
-  {
-    icon: FileText,
-    title: "Droit du travail",
-    description: "Conseil et défense en matière de relations de travail",
-    details: [
-      "Rédaction de contrats de travail",
-      "Procédures de licenciement",
-      "Négociations collectives",
-      "Contentieux prud'homaux",
-      "Harcèlement et discrimination",
-      "Audit social et conformité",
-    ],
-  },
-  {
-    icon: TrendingUp,
-    title: "Droit fiscal",
-    description: "Optimisation et conformité fiscale",
-    details: [
-      "Conseil en fiscalité d'entreprise",
-      "Optimisation fiscale légale",
-      "Contentieux fiscal et recours",
-      "Fiscalité internationale",
-      "Contrôles fiscaux et redressements",
-      "TVA et taxes indirectes",
-    ],
-  },
-  {
-    icon: Shield,
-    title: "Droit pénal",
-    description: "Défense et assistance en matière pénale",
-    details: [
-      "Défense pénale (garde à vue, instruction, procès)",
-      "Droit pénal des affaires",
-      "Assistance aux victimes",
-      "Droit pénal routier",
-      "Appels et pourvois en cassation",
-      "Médiation pénale",
-    ],
-  },
-  {
-    icon: Gavel,
-    title: "Arbitrage & Médiation",
-    description: "Résolution alternative des conflits",
-    details: [
-      "Arbitrage commercial national et international",
-      "Médiation et conciliation",
-      "Rédaction de clauses compromissoires",
-      "Représentation devant les tribunaux arbitraux",
-      "Exécution de sentences arbitrales",
-      "Négociation et transaction",
-    ],
-  },
-  {
-    icon: Building,
-    title: "Droit immobilier",
-    description: "Expertise en transactions et contentieux immobiliers",
-    details: [
-      "Acquisitions et cessions immobilières",
-      "Baux commerciaux et d'habitation",
-      "Droit de la construction",
-      "Copropriété et ASL",
-      "Urbanisme et permis de construire",
-      "Contentieux immobilier",
-    ],
-  },
-  {
-    icon: Award,
-    title: "Droit bancaire",
-    description: "Conseil en opérations bancaires et financières",
-    details: [
-      "Contrats de crédit et garanties",
-      "Restructuration de dettes",
-      "Contentieux bancaire",
-      "Recouvrement de créances",
-      "Droit des sûretés",
-      "Conformité bancaire",
-    ],
-  },
-];
+const iconMap = {
+  Briefcase,
+  Users,
+  FileText,
+  TrendingUp,
+  Shield,
+  Gavel,
+  Building,
+  Award,
+} as const;
 
 export default function ServicesPage() {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
+  const services = locale === "en" ? servicesEn : servicesFr;
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
@@ -145,7 +52,9 @@ export default function ServicesPage() {
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid gap-12">
-            {services.map((service, index) => (
+            {services.map((service: any, index: number) => {
+              const IconComponent = iconMap[service.icon as keyof typeof iconMap];
+              return (
               <Card
                 key={index}
                 className="overflow-hidden hover:shadow-xl transition-shadow duration-300"
@@ -153,7 +62,9 @@ export default function ServicesPage() {
                 <CardHeader className="bg-secondary/50 pb-6">
                   <div className="flex items-start gap-4">
                     <div className="p-3 bg-accent/10 rounded-lg">
-                      <service.icon className="h-8 w-8 text-accent" />
+                      {IconComponent ? (
+                        <IconComponent className="h-8 w-8 text-accent" />
+                      ) : null}
                     </div>
                     <div className="flex-1">
                       <CardTitle className="font-serif text-2xl md:text-3xl mb-2">
@@ -167,7 +78,7 @@ export default function ServicesPage() {
                 </CardHeader>
                 <CardContent className="pt-6">
                   <ul className="grid md:grid-cols-2 gap-3">
-                    {service.details.map((detail, idx) => (
+                    {service.details.map((detail: string, idx: number) => (
                       <li key={idx} className="flex items-start gap-2">
                         <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                         <span className="text-foreground/90">{detail}</span>
@@ -176,7 +87,8 @@ export default function ServicesPage() {
                   </ul>
                 </CardContent>
               </Card>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

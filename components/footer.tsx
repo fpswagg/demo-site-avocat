@@ -1,15 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import {
-  Scale,
-  Phone,
-  Mail,
-  MapPin,
-  Facebook,
-  Linkedin,
-  Twitter,
-} from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Linkedin, Twitter } from "lucide-react";
 import { siteConfig } from "@/lib/config";
 import { useI18n } from "@/components/i18n-provider";
 
@@ -22,7 +14,14 @@ export function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <Scale className="h-8 w-8 text-accent" />
+              <img
+                src="/logo.png"
+                alt={siteConfig.name[locale]}
+                className="h-8 w-8 rounded-sm object-contain"
+                onError={(e) => {
+                  (e.currentTarget as HTMLImageElement).src = "/placeholder-logo.png";
+                }}
+              />
               <span className="font-serif text-xl font-semibold">
                 {siteConfig.name[locale]}
               </span>

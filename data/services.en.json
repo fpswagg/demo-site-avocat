@@ -1,0 +1,108 @@
+[
+  {
+    "icon": "Briefcase",
+    "title": "Business Law",
+    "description": "Comprehensive legal support for companies",
+    "details": [
+      "Company formation and structuring",
+      "Drafting and negotiation of commercial contracts",
+      "Mergers, acquisitions and restructurings",
+      "Corporate law and governance",
+      "Intellectual property and trademark protection",
+      "Commercial litigation"
+    ]
+  },
+  {
+    "icon": "Users",
+    "title": "Civil Law",
+    "description": "Protecting your personal and family interests",
+    "details": [
+      "Family law (divorce, child custody)",
+      "Inheritance and donations",
+      "Real estate law (sale, rental, co-ownership)",
+      "Civil liability",
+      "Contracts between individuals",
+      "Civil disputes and mediation"
+    ]
+  },
+  {
+    "icon": "FileText",
+    "title": "Labor Law",
+    "description": "Advice and defense in employment relations",
+    "details": [
+      "Drafting employment contracts",
+      "Dismissal procedures",
+      "Collective bargaining",
+      "Labor court litigation",
+      "Harassment and discrimination",
+      "Social audit and compliance"
+    ]
+  },
+  {
+    "icon": "TrendingUp",
+    "title": "Tax Law",
+    "description": "Tax optimization and compliance",
+    "details": [
+      "Corporate tax advice",
+      "Lawful tax optimization",
+      "Tax litigation and appeals",
+      "International taxation",
+      "Tax audits and reassessments",
+      "VAT and indirect taxes"
+    ]
+  },
+  {
+    "icon": "Shield",
+    "title": "Criminal Law",
+    "description": "Defense and assistance in criminal matters",
+    "details": [
+      "Criminal defense (custody, investigation, trial)",
+      "Corporate criminal law",
+      "Victim assistance",
+      "Road traffic offenses",
+      "Appeals and cassation",
+      "Criminal mediation"
+    ]
+  },
+  {
+    "icon": "Gavel",
+    "title": "Arbitration & Mediation",
+    "description": "Alternative dispute resolution",
+    "details": [
+      "Domestic and international commercial arbitration",
+      "Mediation and conciliation",
+      "Drafting arbitration clauses",
+      "Representation before arbitral tribunals",
+      "Enforcement of arbitral awards",
+      "Negotiation and settlement"
+    ]
+  },
+  {
+    "icon": "Building",
+    "title": "Real Estate Law",
+    "description": "Expertise in real estate transactions and litigation",
+    "details": [
+      "Real estate acquisitions and disposals",
+      "Commercial and residential leases",
+      "Construction law",
+      "Co-ownership and associations",
+      "Urban planning and building permits",
+      "Real estate litigation"
+    ]
+  },
+  {
+    "icon": "Award",
+    "title": "Banking Law",
+    "description": "Advice on banking and financial operations",
+    "details": [
+      "Credit agreements and guarantees",
+      "Debt restructuring",
+      "Banking litigation",
+      "Debt recovery",
+      "Security interests",
+      "Banking compliance"
+    ]
+  }
+]
+
+

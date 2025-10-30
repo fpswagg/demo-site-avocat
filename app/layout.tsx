@@ -26,7 +26,31 @@ export const metadata: Metadata = {
   title: "Cabinet Juridique Excellence | Avocats à Yaoundé",
   description:
     "Cabinet d'avocats de premier plan à Yaoundé, spécialisé en droit des affaires, droit civil et conseil juridique d'entreprise.",
-  generator: "v0.app",
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
+  openGraph: {
+    title: "Cabinet Juridique Excellence | Avocats à Yaoundé",
+    description:
+      "Cabinet d'avocats de premier plan à Yaoundé, spécialisé en droit des affaires, droit civil et conseil juridique d'entreprise.",
+    images: [
+      {
+        url: "/logo.png",
+        width: 512,
+        height: 512,
+        alt: "Cabinet Juridique Excellence",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "Cabinet Juridique Excellence | Avocats à Yaoundé",
+    description:
+      "Cabinet d'avocats de premier plan à Yaoundé, spécialisé en droit des affaires, droit civil et conseil juridique d'entreprise.",
+    images: ["/logo.png"],
+  },
 };
 
 export default function RootLayout({
