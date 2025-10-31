@@ -47,7 +47,7 @@ export default function CaseStudiesPage() {
               },
               {
                 icon: Users,
-                number: "300+",
+                number: "500+",
                 label: t("caseStudies.statsClients"),
               },
               {
