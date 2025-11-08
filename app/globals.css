@@ -1,103 +1,76 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
-
 :root {
-  /* Refined Light Blue Theme for better contrast and readability */
-  /* Background and foreground */
-  --background: oklch(1 0 0); /* pure white for clean contrast */
-  --foreground: oklch(0.22 0.02 255); /* neutral dark for text */
+  /* Premium Legal Theme - Élégance Professionnelle */
+  
+  /* === Core Colors === */
+  /* Background: Blanc crème très doux - élégant et reposant */
+  --background: 252 250 248;
+  
+  /* Foreground: Noir charbon profond - lisibilité maximale */
+  --foreground: 30 32 40;
 
-  /* Surfaces */
-  --card: oklch(0.99 0.005 240);
-  --card-foreground: var(--foreground);
-  --popover: var(--background);
-  --popover-foreground: var(--foreground);
+  /* === Surfaces === */
+  --card: 255 255 255; /* Blanc pur pour cartes - contraste fort */
+  --card-foreground: 30 32 40;
+  
+  --popover: 255 255 255;
+  --popover-foreground: 30 32 40;
 
-  /* Brand colors */
-  --primary: oklch(0.48 0.12 235); /* deeper blue for strong contrast */
-  --primary-foreground: oklch(1 0 0); /* white on primary */
+  /* === Primary: Bleu Marine Professionnel === */
+  /* Couleur des CTA et éléments importants - forte présence */
+  --primary: 25 35 75; /* Navy profond et riche */
+  --primary-foreground: 255 255 255;
 
-  --secondary: oklch(0.965 0.018 235); /* subtle sky tint */
-  --secondary-foreground: oklch(0.3 0.04 250);
+  /* === Secondary: Gris Perle Subtil === */
+  /* Arrière-plans de sections - doux mais visible */
+  --secondary: 240 242 245; /* Gris-bleu très clair */
+  --secondary-foreground: 35 38 45;
 
-  /* Accent used for icons, links and CTA background */
-  --accent: oklch(0.82 0.06 230); /* light sky for good contrast on primary */
-  --accent-foreground: oklch(0.22 0.02 255); /* dark text on light accent */
+  /* === Accent: Bordeaux Élégant === */
+  /* Touches de prestige - visible mais raffiné */
+  --accent: 115 32 45; /* Bordeaux riche */
+  --accent-foreground: 255 255 255;
 
-  /* Support */
-  --muted: oklch(0.95 0.015 240);
-  --muted-foreground: oklch(0.42 0.025 255);
+  /* === Support === */
+  --muted: 238 240 243;
+  --muted-foreground: 110 115 125;
 
-  /* Destructive */
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(1 0 0);
+  /* === Destructive === */
+  --destructive: 220 38 38;
+  --destructive-foreground: 255 255 255;
 
-  /* Borders & focus */
-  --border: oklch(0.9 0.015 245);
-  --input: var(--border);
-  --ring: var(--primary);
+  /* === Borders & Inputs === */
+  --border: 220 222 228; /* Bordures visibles */
+  --input: 225 227 232;
+  --ring: 115 32 45; /* Focus bordeaux pour élégance */
 
-  /* Charts */
-  --chart-1: oklch(0.48 0.12 235);
-  --chart-2: oklch(0.62 0.11 220);
-  --chart-3: oklch(0.42 0.1 250);
-  --chart-4: oklch(0.7 0.1 210);
-  --chart-5: oklch(0.58 0.11 255);
+  /* === Charts === */
+  --chart-1: 25 35 75; /* Navy */
+  --chart-2: 115 32 45; /* Bordeaux */
+  --chart-3: 45 85 155; /* Bleu moyen */
+  --chart-4: 105 125 155; /* Gris-bleu */
+  --chart-5: 85 25 35; /* Bordeaux foncé */
 
   --radius: 0.5rem;
 
-  /* Sidebar */
-  --sidebar: var(--background);
-  --sidebar-foreground: var(--foreground);
-  --sidebar-primary: var(--primary);
-  --sidebar-primary-foreground: var(--primary-foreground);
-  --sidebar-accent: var(--secondary);
-  --sidebar-accent-foreground: var(--secondary-foreground);
-  --sidebar-border: var(--border);
-  --sidebar-ring: var(--ring);
+  /* === Sidebar === */
+  --sidebar: 28 38 68; /* Navy foncé */
+  --sidebar-foreground: 245 245 245;
+  --sidebar-primary: 115 32 45; /* Bordeaux */
+  --sidebar-primary-foreground: 255 255 255;
+  --sidebar-accent: 45 55 85;
+  --sidebar-accent-foreground: 245 245 245;
+  --sidebar-border: 45 55 85;
+  --sidebar-ring: 115 32 45;
 
-  /* Fonts */
+  /* === Fonts === */
   --font-inter: "Inter", sans-serif;
   --font-crimson: "Crimson Text", serif;
 }
 
-.dark {
-  /* Dark mode tuned for contrast with blue accents */
-  --background: oklch(0.15 0.015 255);
-  --foreground: oklch(0.985 0.005 255);
-  --card: oklch(0.18 0.015 255);
-  --card-foreground: var(--foreground);
-  --popover: var(--background);
-  --popover-foreground: var(--foreground);
-  --primary: oklch(0.72 0.15 235);
-  --primary-foreground: oklch(0.1 0 0);
-  --secondary: oklch(0.28 0.03 255);
-  --secondary-foreground: var(--foreground);
-  --muted: oklch(0.26 0.02 255);
-  --muted-foreground: oklch(0.75 0.015 255);
-  --accent: oklch(0.78 0.08 230);
-  --accent-foreground: oklch(0.12 0 0);
-  --destructive: oklch(0.50 0.20 27);
-  --destructive-foreground: var(--foreground);
-  --border: oklch(0.3 0.02 255);
-  --input: var(--border);
-  --ring: var(--primary);
-  --chart-1: oklch(0.72 0.15 235);
-  --chart-2: oklch(0.64 0.13 260);
-  --chart-3: oklch(0.7 0.12 210);
-  --chart-4: oklch(0.62 0.12 200);
-  --chart-5: oklch(0.68 0.14 250);
-  --sidebar: var(--background);
-  --sidebar-foreground: var(--foreground);
-  --sidebar-primary: var(--primary);
-  --sidebar-primary-foreground: var(--primary-foreground);
-  --sidebar-accent: var(--secondary);
-  --sidebar-accent-foreground: var(--secondary-foreground);
-  --sidebar-border: var(--border);
-  --sidebar-ring: var(--ring);
-}
+/* Dark mode désactivé - Thème clair uniquement */
 
 @theme inline {
   --color-background: var(--background);

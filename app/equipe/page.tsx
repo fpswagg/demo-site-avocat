@@ -34,7 +34,7 @@ export default function TeamPage() {
             {teamData.map((member, index) => (
               <Card
                 key={member.id}
-                className="overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-border bg-card"
               >
                 <div
                   className={`grid lg:grid-cols-5 gap-8 ${
@@ -156,18 +156,23 @@ export default function TeamPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 lg:px-8 text-center">
+      <section className="py-20 bg-primary text-primary-foreground shadow-inner relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-accent rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent rounded-full blur-3xl" />
+        </div>
+        <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
           <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-balance">
             {t("team.meetExperts")}
           </h2>
-          <p className="text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-primary-foreground/90 mb-8 max-w-2xl mx-auto leading-relaxed">
             {t("team.meetExpertsSubtitle")}
           </p>
           <Button
             asChild
             size="lg"
-            className="bg-accent text-accent-foreground hover:bg-accent/90"
+            className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg hover:shadow-xl transition-all hover:scale-105"
           >
             <Link href="/contact">{t("common.bookAppointment")}</Link>
           </Button>

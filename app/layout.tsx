@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Crimson_Text } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { ThemeProvider } from "next-themes";
 import "./globals.css";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
@@ -23,6 +24,7 @@ const crimson = Crimson_Text({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
   title: "Cabinet Juridique Excellence | Avocats à Yaoundé",
   description:
     "Cabinet d'avocats de premier plan à Yaoundé, spécialisé en droit des affaires, droit civil et conseil juridique d'entreprise.",
@@ -63,14 +65,22 @@ export default function RootLayout({
       <body
         className={`font-sans ${inter.variable} ${crimson.variable} antialiased`}
       >
-        <I18nProvider>
-          <Suspense fallback={<div>Loading...</div>}>
-            <Navigation />
-            <main>{children}</main>
-            <Footer />
-            <Analytics />
-          </Suspense>
-        </I18nProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          forcedTheme="light"
+          enableSystem={false}
+          disableTransitionOnChange
+        >
+          <I18nProvider>
+            <Suspense fallback={<div>Loading...</div>}>
+              <Navigation />
+              <main>{children}</main>
+              <Footer />
+              <Analytics />
+            </Suspense>
+          </I18nProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

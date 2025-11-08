@@ -45,7 +45,7 @@ export default function NewsPage() {
       {sortedNews.length > 0 && (
         <section className="py-12 lg:py-16">
           <div className="container mx-auto px-4 lg:px-8">
-            <Card className="overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <Card className="overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 border-border bg-card">
               <div className="grid lg:grid-cols-2 gap-0">
                 <div className="relative h-[300px] lg:h-auto">
                   <img
@@ -99,7 +99,7 @@ export default function NewsPage() {
             {sortedNews.slice(1).map((article) => (
               <Card
                 key={article.id}
-                className="overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col"
+                className="overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col border-border bg-card"
               >
                 <div className="relative h-[200px]">
                   <img
@@ -140,24 +140,29 @@ export default function NewsPage() {
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-20 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="py-20 bg-primary text-primary-foreground shadow-inner relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-accent rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent rounded-full blur-3xl" />
+        </div>
+        <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">
               {t("news.stayInformed")}
             </h2>
-            <p className="text-primary-foreground/80 mb-8">
+            <p className="text-primary-foreground/90 mb-8 leading-relaxed">
               {t("news.newsletterSubtitle")}
             </p>
             <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
               <input
                 type="email"
                 placeholder={t("news.emailPlaceholder")}
-                className="flex-1 px-4 py-3 rounded-md text-foreground bg-background border-0 focus:ring-2 focus:ring-accent"
+                className="flex-1 px-4 py-3 rounded-md text-foreground bg-background border-0 focus:ring-2 focus:ring-accent shadow-lg"
               />
               <button
                 type="submit"
-                className="px-6 py-3 bg-accent text-accent-foreground rounded-md font-medium hover:bg-accent/90 transition-colors"
+                className="px-6 py-3 bg-accent text-accent-foreground rounded-md font-medium hover:bg-accent/90 transition-all hover:scale-105 shadow-lg"
               >
                 {t("news.subscribe")}
               </button>

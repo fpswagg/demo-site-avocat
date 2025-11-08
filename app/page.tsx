@@ -100,7 +100,7 @@ export default function HomePage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-primary text-primary-foreground">
+      <section className="py-16 bg-primary text-primary-foreground shadow-inner">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
@@ -109,11 +109,11 @@ export default function HomePage() {
               { number: "15", label: t("home.statsLawyers") },
               { number: "95%", label: t("home.statsSuccessRate") },
             ].map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl font-serif font-bold text-accent mb-2">
+              <div key={index} className="text-center group">
+                <div className="text-4xl md:text-5xl font-serif font-bold text-accent mb-2 group-hover:scale-110 transition-transform duration-300">
                   {stat.number}
                 </div>
-                <div className="text-sm text-primary-foreground/80">
+                <div className="text-sm text-primary-foreground/90 font-medium">
                   {stat.label}
                 </div>
               </div>
@@ -169,10 +169,12 @@ export default function HomePage() {
             ].map((service, index) => (
               <Card
                 key={index}
-                className="group hover:shadow-lg transition-all duration-300 border-border hover:border-accent"
+                className="group hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-border hover:border-accent/50 bg-card"
               >
                 <CardContent className="p-6">
-                  <service.icon className="h-12 w-12 text-accent mb-4 group-hover:scale-110 transition-transform" />
+                  <div className="h-14 w-14 rounded-lg bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
+                    <service.icon className="h-7 w-7 text-accent group-hover:scale-110 transition-transform" />
+                  </div>
                   <h3 className="font-serif text-xl font-semibold mb-3 text-foreground">
                     {service.title}
                   </h3>
@@ -181,7 +183,7 @@ export default function HomePage() {
                   </p>
                   <Link
                     href="/services"
-                    className="inline-flex items-center gap-2 text-accent hover:gap-3 transition-all text-sm font-medium"
+                    className="inline-flex items-center gap-2 text-accent hover:gap-3 transition-all text-sm font-medium group-hover:underline"
                   >
                     {t("common.readMore")} <ArrowRight className="h-4 w-4" />
                   </Link>
@@ -233,18 +235,23 @@ export default function HomePage() {
       {/* CTA Section */}
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4 lg:px-8">
-          <Card className="bg-primary text-primary-foreground border-0">
-            <CardContent className="p-12 lg:p-16 text-center">
+          <Card className="bg-primary text-primary-foreground border-0 shadow-2xl relative overflow-hidden">
+            {/* Decorative background pattern */}
+            <div className="absolute inset-0 opacity-10">
+              <div className="absolute top-0 right-0 w-96 h-96 bg-accent rounded-full blur-3xl" />
+              <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent rounded-full blur-3xl" />
+            </div>
+            <CardContent className="p-12 lg:p-16 text-center relative z-10">
               <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-balance">
                 {t("home.needAdvice")}
               </h2>
-              <p className="text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
+              <p className="text-lg text-primary-foreground/90 mb-8 max-w-2xl mx-auto leading-relaxed">
                 {t("home.contactToday")}
               </p>
               <Button
                 asChild
                 size="lg"
-                className="bg-accent text-accent-foreground hover:bg-accent/90"
+                className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg hover:shadow-xl transition-all hover:scale-105"
               >
                 <Link href="/contact">{t("home.bookNow")}</Link>
               </Button>

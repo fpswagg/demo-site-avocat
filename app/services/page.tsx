@@ -57,20 +57,20 @@ export default function ServicesPage() {
               return (
               <Card
                 key={index}
-                className="overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-border bg-card"
               >
-                <CardHeader className="bg-secondary/50 pb-6">
+                <CardHeader className="bg-secondary/50 pb-6 border-b border-border">
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-accent/10 rounded-lg">
+                    <div className="p-4 bg-accent/15 rounded-xl group-hover:bg-accent/25 transition-colors">
                       {IconComponent ? (
                         <IconComponent className="h-8 w-8 text-accent" />
                       ) : null}
                     </div>
                     <div className="flex-1">
-                      <CardTitle className="font-serif text-2xl md:text-3xl mb-2">
+                      <CardTitle className="font-serif text-2xl md:text-3xl mb-2 text-foreground">
                         {service.title}
                       </CardTitle>
-                      <p className="text-muted-foreground">
+                      <p className="text-muted-foreground leading-relaxed">
                         {service.description}
                       </p>
                     </div>
@@ -81,7 +81,7 @@ export default function ServicesPage() {
                     {service.details.map((detail: string, idx: number) => (
                       <li key={idx} className="flex items-start gap-2">
                         <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
-                        <span className="text-foreground/90">{detail}</span>
+                        <span className="text-foreground/90 text-sm">{detail}</span>
                       </li>
                     ))}
                   </ul>
@@ -94,18 +94,23 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 lg:px-8 text-center">
+      <section className="py-20 bg-primary text-primary-foreground shadow-inner relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-accent rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent rounded-full blur-3xl" />
+        </div>
+        <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
           <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-balance">
             {t("services.ctaTitle")}
           </h2>
-          <p className="text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-primary-foreground/90 mb-8 max-w-2xl mx-auto leading-relaxed">
             {t("services.ctaSubtitle")}
           </p>
           <Button
             asChild
             size="lg"
-            className="bg-accent text-accent-foreground hover:bg-accent/90"
+            className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg hover:shadow-xl transition-all hover:scale-105"
           >
             <Link href="/contact">{t("common.bookAppointment")}</Link>
           </Button>
