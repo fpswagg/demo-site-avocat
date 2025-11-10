@@ -28,14 +28,14 @@ export function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             {/* Logo image with graceful fallback */}
-            <img
+            {/* <img
               src="/logo.png"
               alt={siteConfig.name[locale]}
               className="h-11 w-11 rounded object-contain transition-all duration-300 group-hover:scale-105"
               onError={(e) => {
                 (e.currentTarget as HTMLImageElement).src = "/placeholder-logo.png";
               }}
-            />
+            /> */}
             <span className="font-serif text-xl lg:text-2xl font-bold text-foreground tracking-tight">
               {siteConfig.name[locale]}
             </span>
@@ -57,10 +57,10 @@ export function Navigation() {
             </div>
 
             {/* Divider */}
-            <div className="h-8 w-px bg-border mx-3" />
+            {/* <div className="h-8 w-px bg-border mx-3" /> */}
 
             {/* Actions */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-1">
               <Button asChild size="default" className="shadow-sm px-6">
                 <Link href="/contact">{t("common.bookAppointment")}</Link>
               </Button>
@@ -73,7 +73,7 @@ export function Navigation() {
                     "text-xs font-medium px-4 py-2 rounded transition-all duration-200",
                     locale === "fr"
                       ? "bg-primary text-primary-foreground shadow-sm"
-                      : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
+                      : "text-muted-foreground hover:text-foreground hover:bg-secondary/50 cursor-pointer"
                   )}
                 >
                   FR
@@ -84,7 +84,7 @@ export function Navigation() {
                     "text-xs font-medium px-4 py-2 rounded transition-all duration-200",
                     locale === "en"
                       ? "bg-primary text-primary-foreground shadow-sm"
-                      : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
+                      : "text-muted-foreground hover:text-foreground hover:bg-secondary/50 cursor-pointer"
                   )}
                 >
                   EN

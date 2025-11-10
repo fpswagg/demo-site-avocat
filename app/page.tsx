@@ -13,21 +13,19 @@ import {
 } from "lucide-react";
 import { useI18n } from "@/components/i18n-provider";
 import { useState, useEffect } from "react";
-import teamDataFr from "@/data/team.json";
-import teamDataEn from "@/data/team.en.json";
+import homePageImages from "@/data/home-images.json";
 
 export default function HomePage() {
   const { t, locale } = useI18n();
-  const teamData = locale === "en" ? teamDataEn : teamDataFr;
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   // Auto-rotate images every 4 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % teamData.length);
+      setCurrentImageIndex((prev) => (prev + 1) % homePageImages.length);
     }, 4000);
     return () => clearInterval(interval);
-  }, [teamData.length]);
+  }, [homePageImages.length]);
 
   return (
     <div className="min-h-screen">
@@ -35,17 +33,17 @@ export default function HomePage() {
       <section className="relative min-h-[90vh] flex items-center justify-center pt-20 overflow-hidden">
         {/* Carousel Background */}
         <div className="absolute inset-0 z-0">
-          {teamData.map((member: any, index: number) => (
+          {homePageImages.map((imageUrl, index: number) => (
             <div
-              key={member.id}
+              key={index}
               className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
               style={{
                 opacity: currentImageIndex === index ? 1 : 0,
               }}
             >
               <img
-                src={member.image || "/placeholder.svg"}
-                alt={member.name}
+                src={imageUrl || "/placeholder.svg"}
+                alt={`Image ${index}`}
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/90 to-background" />
@@ -55,7 +53,7 @@ export default function HomePage() {
 
         {/* Carousel Indicators */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex gap-2">
-          {teamData.map((_: any, index: number) => (
+          {homePageImages.map((_: string, index: number) => (
             <button
               key={index}
               onClick={() => setCurrentImageIndex(index)}
