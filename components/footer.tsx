@@ -14,14 +14,14 @@ export function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <img
+              {/* <img
                 src="/logo.png"
                 alt={siteConfig.name[locale]}
                 className="h-8 w-8 rounded-sm object-contain"
                 onError={(e) => {
                   (e.currentTarget as HTMLImageElement).src = "/placeholder-logo.png";
                 }}
-              />
+              /> */}
               <span className="font-serif text-xl font-semibold">
                 {siteConfig.name[locale]}
               </span>
